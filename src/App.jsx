@@ -1,17 +1,17 @@
-
-
-
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import Home from "./Pages/Home"
+import Starred from './Pages/Starred';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-        <p>
-         hi
-        </p>
-        
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/home" element={<Home />}/>   
+        <Route path="/starred" element={<Starred />}/>
+        <Route path="*" element={<div>No Page Found</div>}/>
+     
+      </Routes>
+      
+    </BrowserRouter>
   );
 }
 
